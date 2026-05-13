@@ -1,0 +1,240 @@
+[
+  {
+    "key": "Rapport d'approbation et détails de couverture",
+    "value": "Rapport d'approbation et détails de couverture",
+    "original_key": "Raport de aprobare și detalii de acoperire",
+    "original_value": "Raport de aprobare și detalii de acoperire",
+    "type": "header"
+  },
+  {
+    "key": "Réf. approbation",
+    "value": "11165388",
+    "original_key": "Ref. aprobare",
+    "original_value": "11165388",
+    "type": "text"
+  },
+  {
+    "key": "Date d'approbation",
+    "value": "09.11.2025",
+    "original_key": "Data aprobare",
+    "original_value": "09.11.2025",
+    "type": "date"
+  },
+  {
+    "key": "Valable jusqu'au",
+    "value": "31.12.2025",
+    "original_key": "Valabil până la",
+    "original_value": "31.12.2025",
+    "type": "date"
+  },
+  {
+    "key": "Statut",
+    "value": "Approuvé",
+    "original_key": "Status",
+    "original_value": "Aprobat",
+    "type": "text"
+  },
+  {
+    "key": "DONNÉES DE RÉFÉRENCE",
+    "value": "DONNÉES DE RÉFÉRENCE",
+    "original_key": "DATE DE REFERINȚĂ",
+    "original_value": "DATE DE REFERINȚĂ",
+    "type": "header"
+  },
+  {
+    "key": "NUMÉRO INDIVIDUEL",
+    "value": "Anonymisé",
+    "original_key": "NUMĂR INDIVIDUAL",
+    "original_value": "Anonimizat",
+    "type": "text"
+  },
+  {
+    "key": "NOM DU TITULAIRE DE CARTE",
+    "value": "Anonymisé",
+    "original_key": "NUME DEȚINATOR CARD",
+    "original_value": "Anonimizat",
+    "type": "text"
+  },
+  {
+    "key": "DATE DE NAISSANCE",
+    "value": "18.01.1981",
+    "original_key": "DATA NAȘTERII",
+    "original_value": "18.01.1981",
+    "type": "date"
+  },
+  {
+    "key": "COMPAGNIE D'ASSURANCE",
+    "value": "BKIC",
+    "original_key": "COMPANIE DE ASIGURĂRI",
+    "original_value": "BKIC",
+    "type": "text"
+  },
+  {
+    "key": "MÉDECIN / PRESTATAIRE",
+    "value": "Dr. Mohsin Kaldas",
+    "original_key": "MEDIC / FURNIZOR",
+    "original_value": "Dr. Mohsin Kaldas",
+    "type": "text"
+  },
+  {
+    "key": "SPÉCIALITÉ",
+    "value": "ORL - soins primaires",
+    "original_key": "SPECIALITATE",
+    "original_value": "ORL - îngrijire primară",
+    "type": "text"
+  },
+  {
+    "key": "SERVICES APPROUVÉS",
+    "value": "SERVICES APPROUVÉS",
+    "original_key": "SERVICII APROBATE",
+    "original_value": "SERVICII APROBATE",
+    "type": "header"
+  },
+  {
+    "key": "Catégorie de service - Ligne 1",
+    "value": "Consultation | Consultation ORL - médecin spécialiste | 1 | 1 | Approuvé | Conforme à la couverture",
+    "original_key": "Categorie serviciu - Row 1",
+    "original_value": "Consultație | Consultație ORL - medic specialist | 1 | 1 | Aprobat | Conform acoperirii",
+    "type": "table"
+  },
+  {
+    "key": "Catégorie de service - Ligne 2",
+    "value": "Injections et perfusions | Injection Lincocin | 1 | 1 | Approuvé | Médicalement indiqué",
+    "original_key": "Categorie serviciu - Row 2",
+    "original_value": "Injecții și perfuzii | Injecție Lincocin | 1 | 1 | Aprobat | Indicat medical",
+    "type": "table"
+  },
+  {
+    "key": "Catégorie de service - Ligne 3",
+    "value": "Injections et perfusions | Injection Depo-Medrol | 1 | 1 | Approuvé | Médicalement indiqué",
+    "original_key": "Categorie serviciu - Row 3",
+    "original_value": "Injecții și perfuzii | Injecție Depo-Medrol | 1 | 1 | Aprobat | Indicat medical",
+    "type": "table"
+  },
+  {
+    "key": "DOCUMENTS REQUIS POUR LA SOUMISSION DE LA DEMANDE DE REMBOURSEMENT",
+    "value": "DOCUMENTS REQUIS POUR LA SOUMISSION DE LA DEMANDE DE REMBOURSEMENT",
+    "original_key": "DOCUMENTE NECESARE LA DEPUNEREA CLAIMULUI",
+    "original_value": "DOCUMENTE NECESARE LA DEPUNEREA CLAIMULUI",
+    "type": "header"
+  },
+  {
+    "key": "Liste des documents requis",
+    "value": "1. Formulaire d'approbation / de préautorisation.\n2. Copie d'une pièce d'identité : carte d'identité, passeport, CPR ou permis de conduire.\n3. Formulaire de demande de remboursement complété et signé.\n4. Copie de la carte d'assurance.\n5. Rapport médical et résultats des examens, le cas échéant.\n6. Résumé de sortie, si le service a impliqué une hospitalisation.",
+    "original_key": "Documente necesare lista",
+    "original_value": "1. Formularul de aprobare / preautorizare.\n2. Copie act de identitate: carte de identitate, pașaport, CPR sau permis de conducere.\n3. Formularul de claim completat și semnat.\n4. Copie card de asigurare.\n5. Raport medical și rezultate ale investigațiilor, dacă există.\n6. Sumar de externare, dacă serviciul a implicat internare.",
+    "type": "text"
+  },
+  {
+    "key": "DIAGNOSTIC ET INFORMATIONS MÉDICALES",
+    "value": "DIAGNOSTIC ET INFORMATIONS MÉDICALES",
+    "original_key": "DIAGNOSTIC ȘI INFORMAȚII MEDICALE",
+    "original_value": "DIAGNOSTIC ȘI INFORMAȚII MEDICALE",
+    "type": "header"
+  },
+  {
+    "key": "Diagnostic principal",
+    "value": "Otite moyenne séreuse aiguë",
+    "original_key": "Diagnostic principal",
+    "original_value": "Otită medie seroasă acută",
+    "type": "text"
+  },
+  {
+    "key": "Date de la visite",
+    "value": "09.11.2025",
+    "original_key": "Data vizitei",
+    "original_value": "09.11.2025",
+    "type": "date"
+  },
+  {
+    "key": "Tension / pouls / température",
+    "value": "Non renseigné",
+    "original_key": "Tensiune / puls / temperatură",
+    "original_value": "Nu este raportat",
+    "type": "text"
+  },
+  {
+    "key": "Durée de la maladie",
+    "value": "Non renseignée",
+    "original_key": "Durata bolii",
+    "original_value": "Nu este raportată",
+    "type": "text"
+  },
+  {
+    "key": "Fichiers téléchargés",
+    "value": "Formulaire, reçu, rapport d'approbation",
+    "original_key": "Fișiere încărcate",
+    "original_value": "Formular, chitanță, raport aprobare",
+    "type": "text"
+  },
+  {
+    "key": "CONDITIONS D'ÉVALUATION ET DE PAIEMENT",
+    "value": "CONDITIONS D'ÉVALUATION ET DE PAIEMENT",
+    "original_key": "CONDIȚII DE EVALUARE ȘI PLATĂ",
+    "original_value": "CONDIȚII DE EVALUARE ȘI PLATĂ",
+    "type": "header"
+  },
+  {
+    "key": "Texte des conditions d'évaluation",
+    "value": "En cas d'approbation, la demande reste soumise à révision concernant le tarif, les réductions contractuelles et la nécessité médicale, conformément aux règles d'utilisation habituelle, raisonnable et coutumière.\nLe montant final payable peut être ajusté en fonction de l'éligibilité de la police, des co-paiements, des franchises, des limites de couverture et des justificatifs reçus.\nNote TVA : cette demande est soumise aux termes et conditions de TVA applicables au Royaume de Bahreïn, là où celles-ci s'appliquent.",
+    "original_key": "Condiții evaluare text",
+    "original_value": "În cazul aprobării, claimul rămâne supus revizuirii pentru tarif, reduceri contractuale și necesitate medicală, conform regulilor de utilizare uzuală, rezonabilă și obișnuită.\nSuma finală plătibilă poate fi ajustată în funcție de eligibilitatea poliței, coplăți, deduceri, limite de acoperire și documentele justificative primite.\nNotă TVA: această cerere este supusă termenilor și condițiilor de TVA aplicabile în Regatul Bahrain, acolo unde acestea se aplică.",
+    "type": "text"
+  },
+  {
+    "key": "Usage interne - compagnie d'assurance",
+    "value": "Usage interne - compagnie d'assurance",
+    "original_key": "Utilizare internă - compania de asigurări",
+    "original_value": "Utilizare internă - compania de asigurări",
+    "type": "header"
+  },
+  {
+    "key": "Décision - Approuvé",
+    "value": "☑ checked",
+    "original_key": "Decizie - Aprobat",
+    "original_value": "☑ checked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Décision - Refusé",
+    "value": "☐ unchecked",
+    "original_key": "Decizie - Respins",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "N° d'approbation",
+    "value": "11165388",
+    "original_key": "Nr. aprobare",
+    "original_value": "11165388",
+    "type": "text"
+  },
+  {
+    "key": "Commentaires",
+    "value": "Services approuvés conformément à la couverture.",
+    "original_key": "Comentarii",
+    "original_value": "Servicii aprobate conform acoperirii.",
+    "type": "text"
+  },
+  {
+    "key": "Contrôle qualité de la demande",
+    "value": "Contrôle qualité de la demande",
+    "original_key": "Control calitate claim",
+    "original_value": "Control calitate claim",
+    "type": "header"
+  },
+  {
+    "key": "Contrôle qualité de la demande - description",
+    "value": "Vérification de la complétude des documents, corrélation des coûts et confirmation de la nécessité médicale.",
+    "original_key": "Control calitate claim - descriere",
+    "original_value": "Verificare completitudine documente, corelare costuri și confirmare necesitate medicală.",
+    "type": "text"
+  },
+  {
+    "key": "Nom de l'évaluateur / signature / date",
+    "value": "",
+    "original_key": "Nume evaluator / semnătură / dată",
+    "original_value": "",
+    "type": "signature"
+  }
+]

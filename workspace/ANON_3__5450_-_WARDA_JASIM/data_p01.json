@@ -1,0 +1,114 @@
+[
+  {
+    "key": "Nom de la clinique (en haut à gauche)",
+    "value": "[REDACTED]",
+    "original_key": "Clinic Name (Top Left)",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Nom de la clinique (en haut à droite)",
+    "value": "[REDACTED]",
+    "original_key": "Clinic Name (Top Right)",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Spécialité ORL / للأنف والأذن والحنجرة",
+    "value": "ORL (Oto-Rhino-Laryngologie)",
+    "original_key": "للأنف والأذن والحنجرة / ENT Specialty",
+    "original_value": "للأنف والأذن والحنجرة",
+    "type": "header"
+  },
+  {
+    "key": "Tél. mobile",
+    "value": "39820072",
+    "original_key": "Mob.",
+    "original_value": "39820072",
+    "type": "text"
+  },
+  {
+    "key": "Mobile",
+    "value": "٣٩٨٢٠٠٧٢",
+    "original_key": "نقال",
+    "original_value": "٣٩٨٢٠٠٧٢",
+    "type": "text"
+  },
+  {
+    "key": "Tél.",
+    "value": "17274757",
+    "original_key": "Tel",
+    "original_value": "17274757",
+    "type": "text"
+  },
+  {
+    "key": "Téléphone",
+    "value": "١٧٢٧٤٧٥٧",
+    "original_key": "هاتف",
+    "original_value": "١٧٢٧٤٧٥٧",
+    "type": "text"
+  },
+  {
+    "key": "Adresse",
+    "value": "West Riffa, Royaume de Bahreïn",
+    "original_key": "Address",
+    "original_value": "West Riffa, Kingdom of Bahrain",
+    "type": "text"
+  },
+  {
+    "key": "الرفاع الغربي، مملكة البحرين",
+    "value": "الرفاع الغربي، مملكة البحرين",
+    "original_key": "الرفاع الغربي، مملكة البحرين",
+    "original_value": "الرفاع الغربي، مملكة البحرين",
+    "type": "text"
+  },
+  {
+    "key": "N°",
+    "value": "5450",
+    "original_key": "No.",
+    "original_value": "5450",
+    "type": "text"
+  },
+  {
+    "key": "Date / التاريخ",
+    "value": "09.11.25",
+    "original_key": "Date / التاريخ",
+    "original_value": "09.11.25",
+    "type": "date"
+  },
+  {
+    "key": "Reçu de / إستلمنا من",
+    "value": "[REDACTED]",
+    "original_key": "إستلمنا من / Received from",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "La somme de BD / مبلغ وقدره",
+    "value": "Montant brut - 35 BD",
+    "original_key": "The sum of BD / مبلغ وقدره",
+    "original_value": "Gross Amount - 35 BD",
+    "type": "text"
+  },
+  {
+    "key": "Au titre de / وذلك عن",
+    "value": "consultation - 15 BD (Remise - 3 BD) Inj. Lincoin 10 BD (Rem. 2 BD), Inj. Depomedrol 10 BD (Rem. - 2 BD) Déduction - 8.2 BD",
+    "original_key": "Being of / وذلك عن",
+    "original_value": "consultation - 15 BD (Discount - 3 BD) Inj. Lincoin 10 BD (Dis. 2 BD), Inj. Depomedrol 10 BD (Dis - 2 BD) Deduction - 8.2 BD",
+    "type": "text"
+  },
+  {
+    "key": "Net BD / المبلغ",
+    "value": "19.8",
+    "original_key": "Net BD / المبلغ",
+    "original_value": "19.8",
+    "type": "text"
+  },
+  {
+    "key": "Signature / التوقيع",
+    "value": "[signed]",
+    "original_key": "Signature / التوقيع",
+    "original_value": "[signed]",
+    "type": "signature"
+  }
+]

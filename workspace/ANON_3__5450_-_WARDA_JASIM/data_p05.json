@@ -1,0 +1,338 @@
+[
+  {
+    "key": "Nom de la clinique",
+    "value": "Dr. Mohsin Kaldas Clinic",
+    "original_key": "Clinic Name",
+    "original_value": "Dr. Mohsin Kaldas Clinic",
+    "type": "header"
+  },
+  {
+    "key": "Type de formulaire",
+    "value": "Formulaire d'approbation",
+    "original_key": "Form Type",
+    "original_value": "Approval Form",
+    "type": "header"
+  },
+  {
+    "key": "Référence#",
+    "value": "11165388",
+    "original_key": "Reference#",
+    "original_value": "11165388",
+    "type": "text"
+  },
+  {
+    "key": "Numéro individuel",
+    "value": "17318013",
+    "original_key": "Individual Number",
+    "original_value": "17318013",
+    "type": "text"
+  },
+  {
+    "key": "Nom du titulaire de la carte",
+    "value": "[REDACTED]",
+    "original_key": "Card Holder Name",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Date de naissance",
+    "value": "18/01/1981",
+    "original_key": "Date Of Birth",
+    "original_value": "18/01/1981",
+    "type": "date"
+  },
+  {
+    "key": "Compagnie d'assurance",
+    "value": "BKIC",
+    "original_key": "Insurance Co.",
+    "original_value": "BKIC",
+    "type": "text"
+  },
+  {
+    "key": "Médecin",
+    "value": "MOHSIN KALDAS",
+    "original_key": "Physician",
+    "original_value": "MOHSIN KALDAS",
+    "type": "text"
+  },
+  {
+    "key": "Date d'approbation (début)",
+    "value": "09/11/2025",
+    "original_key": "Approval Date (Start)",
+    "original_value": "09/11/2025",
+    "type": "date"
+  },
+  {
+    "key": "Date d'approbation (fin)",
+    "value": "31/12/2025",
+    "original_key": "Approval Date (End)",
+    "original_value": "31/12/2025",
+    "type": "date"
+  },
+  {
+    "key": "Service / Article 1",
+    "value": "CONSULTATION-CONSULTANT / Visite de consultation - Consultant",
+    "original_key": "Service / Item 1",
+    "original_value": "CONSULTATION-CONSULTANT / Consultation visit Consultant",
+    "type": "text"
+  },
+  {
+    "key": "Qté réclamée (Consultation)",
+    "value": "[REDACTED]",
+    "original_key": "Qty Clm (Consultation)",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Qté approuvée (Consultation)",
+    "value": "1",
+    "original_key": "Qty App (Consultation)",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Statut (Consultation)",
+    "value": "Approuvé",
+    "original_key": "Status (Consultation)",
+    "original_value": "Approved",
+    "type": "text"
+  },
+  {
+    "key": "Notes (Consultation)",
+    "value": "",
+    "original_key": "Notes (Consultation)",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Motif (Consultation)",
+    "value": "",
+    "original_key": "Reason (Consultation)",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Service / Article 2",
+    "value": "INJECTIONS ET PERFUSIONS / LINCOCIN",
+    "original_key": "Service / Item 2",
+    "original_value": "INJECTIONS AND INFUSIONS / LINCOCIN",
+    "type": "text"
+  },
+  {
+    "key": "Qté réclamée (LINCOCIN)",
+    "value": "1",
+    "original_key": "Qty Clm (LINCOCIN)",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Qté approuvée (LINCOCIN)",
+    "value": "1",
+    "original_key": "Qty App (LINCOCIN)",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Statut (LINCOCIN)",
+    "value": "Approuvé",
+    "original_key": "Status (LINCOCIN)",
+    "original_value": "Approved",
+    "type": "text"
+  },
+  {
+    "key": "Notes (LINCOCIN)",
+    "value": "",
+    "original_key": "Notes (LINCOCIN)",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Raison (LINCOCIN)",
+    "value": "",
+    "original_key": "Reason (LINCOCIN)",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Service / Article 3",
+    "value": "INJECTIONS ET PERFUSIONS / Depomedrol",
+    "original_key": "Service / Item 3",
+    "original_value": "INJECTIONS AND INFUSIONS / Depomedrol",
+    "type": "text"
+  },
+  {
+    "key": "Qté Réclamée (Depomedrol)",
+    "value": "1",
+    "original_key": "Qty Clm (Depomedrol)",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Qté Approuvée (Depomedrol)",
+    "value": "1",
+    "original_key": "Qty App (Depomedrol)",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Statut (Depomedrol)",
+    "value": "Approuvé",
+    "original_key": "Status (Depomedrol)",
+    "original_value": "Approved",
+    "type": "text"
+  },
+  {
+    "key": "Notes (Depomedrol)",
+    "value": "",
+    "original_key": "Notes (Depomedrol)",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Raison (Depomedrol)",
+    "value": "Test indiqué",
+    "original_key": "Reason (Depomedrol)",
+    "original_value": "Test Indicated",
+    "type": "text"
+  },
+  {
+    "key": "Détails de la couverture",
+    "value": "Détails de la couverture",
+    "original_key": "Coverage Details",
+    "original_value": "Coverage Details",
+    "type": "header"
+  },
+  {
+    "key": "Notes importantes",
+    "value": "Notes importantes",
+    "original_key": "Important Notes",
+    "original_value": "Important Notes",
+    "type": "header"
+  },
+  {
+    "key": "Contenu des notes importantes",
+    "value": "Veuillez joindre les documents requis lors de la soumission de la demande de remboursement\n1-Formulaire d'approbation\n2-Copie de la carte d'identité et/ou passeport, CPR, permis de conduire\n3-Formulaire de demande de remboursement\n4-Copie de la carte d'assurance\n5-Rapport médical et résultats du test demandé - le cas échéant\n6-Résumé de sortie",
+    "original_key": "Important Notes Content",
+    "original_value": "Please Attach the required documents upon submission of claim\n1-Approval Form\n2-Copy of the identification card &/or passport,CPR,Driving license\n3-Claim Form\n4-Copy of Insurance Card\n5-Medical Report and Results of the requested test-if any\n6-Discharge Summary",
+    "type": "text"
+  },
+  {
+    "key": "Diagnostic",
+    "value": "Diagnostic",
+    "original_key": "Diagnosis",
+    "original_value": "Diagnosis",
+    "type": "header"
+  },
+  {
+    "key": "Diagnostic 1",
+    "value": "Otite moyenne séreuse aiguë",
+    "original_key": "Diagnosis 1",
+    "original_value": "Acute serous otitis media",
+    "type": "text"
+  },
+  {
+    "key": "Diagnostic 2",
+    "value": "Otite moyenne séreuse aiguë",
+    "original_key": "Diagnosis 2",
+    "original_value": "Acute serous otitis media",
+    "type": "text"
+  },
+  {
+    "key": "Informations médicales",
+    "value": "Informations médicales",
+    "original_key": "Medical Information",
+    "original_value": "Medical Information",
+    "type": "header"
+  },
+  {
+    "key": "Date",
+    "value": "",
+    "original_key": "Date",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "TA",
+    "value": "",
+    "original_key": "BP",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Pouls",
+    "value": "",
+    "original_key": "Pulse",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Température",
+    "value": "",
+    "original_key": "Temperature",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Durée de la maladie",
+    "value": "",
+    "original_key": "Illness Duration",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Plaintes",
+    "value": "",
+    "original_key": "Complaints",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Signes",
+    "value": "",
+    "original_key": "Signs",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Autres",
+    "value": "",
+    "original_key": "Others",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Fichiers téléchargés",
+    "value": "",
+    "original_key": "Uploaded Files",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Informations supplémentaires",
+    "value": "",
+    "original_key": "Additional Info",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Code",
+    "value": "%09%09",
+    "original_key": "Code",
+    "original_value": "%09%09",
+    "type": "text"
+  },
+  {
+    "key": "Avertissement",
+    "value": "En cas d'approbation, cette demande est soumise à un examen concernant le tarif, les remises et la nécessité médicale – Habituel, Raisonnable et Personnalisé. Merci.",
+    "original_key": "Disclaimer",
+    "original_value": "In case of approval, this claim is subject to review for Tariff, Discounts and Medical Necessity – Usual, Reasonable and Customary. Thank You.",
+    "type": "text"
+  },
+  {
+    "key": "Avis de TVA",
+    "value": "Cette demande est soumise aux termes et conditions de TVA du Royaume de Bahreïn",
+    "original_key": "VAT Notice",
+    "original_value": "This claim is subject to VAT terms and conditions of Kingdom of Bahrain",
+    "type": "text"
+  }
+]

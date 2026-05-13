@@ -1,0 +1,37 @@
+[
+  {
+    "key": "PAGE D'IDENTITÉ EXCLUE",
+    "value": "PAGE D'IDENTITÉ EXCLUE",
+    "original_key": "ID PAGE EXCLUDED",
+    "original_value": "ID PAGE EXCLUDED",
+    "type": "header"
+  },
+  {
+    "key": "Nom du patient correspondant aux autres pages",
+    "value": "Nom du patient correspondant aux autres pages",
+    "original_key": "Patient name matched with other pages",
+    "original_value": "Patient name matched with other pages",
+    "type": "text"
+  },
+  {
+    "key": "Nom correspondant",
+    "value": "WARDA AHMED JASIM",
+    "original_key": "Matched name",
+    "original_value": "WARDA AHMED JASIM",
+    "type": "text"
+  },
+  {
+    "key": "Type de document",
+    "value": "id_document",
+    "original_key": "Document type",
+    "original_value": "id_document",
+    "type": "text"
+  },
+  {
+    "key": "Numéro de page original",
+    "value": "4",
+    "original_key": "Original page number",
+    "original_value": "4",
+    "type": "text"
+  }
+]

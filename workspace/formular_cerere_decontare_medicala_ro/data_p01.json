@@ -1,0 +1,212 @@
+[
+  {
+    "key": "Reçu médical et récapitulatif des coûts",
+    "value": "Reçu médical et récapitulatif des coûts",
+    "original_key": "Chitanță medicală și sumar de costuri",
+    "original_value": "Chitanță medicală și sumar de costuri",
+    "type": "header"
+  },
+  {
+    "key": "Dossier de remboursement - services ORL, soins primaires / ambulatoire",
+    "value": "Dossier de remboursement - services ORL, soins primaires / ambulatoire",
+    "original_key": "Dosar de decontare - servicii ORL, îngrijire primară / ambulatoriu",
+    "original_value": "Dosar de decontare - servicii ORL, îngrijire primară / ambulatoriu",
+    "type": "header"
+  },
+  {
+    "key": "N° de dossier",
+    "value": "5450",
+    "original_key": "Nr. dosar",
+    "original_value": "5450",
+    "type": "text"
+  },
+  {
+    "key": "Date",
+    "value": "09.11.2025",
+    "original_key": "Data",
+    "original_value": "09.11.2025",
+    "type": "date"
+  },
+  {
+    "key": "Devise",
+    "value": "BD",
+    "original_key": "Monedă",
+    "original_value": "BD",
+    "type": "text"
+  },
+  {
+    "key": "Statut",
+    "value": "en cours de vérification",
+    "original_key": "Status",
+    "original_value": "în verificare",
+    "type": "text"
+  },
+  {
+    "key": "Objet du document",
+    "value": "formulaire professionnel en langue roumaine pour un dossier d'assurance médicale, construit sur la structure d'une demande de remboursement de clinique/hôpital : reçu, formulaire de demande, détails médicaux, coûts, services approuvés et liste des pièces justificatives. Les données d'identification sont anonymisées.",
+    "original_key": "Scop document",
+    "original_value": "formular profesional în limba română pentru un dosar de asigurare medicală, construit pe structura unui claim de clinică/hospital: chitanță, formular de cerere, detalii medicale, costuri, servicii aprobate și listă de documente justificative. Datele de identificare sunt anonimizate.",
+    "type": "text"
+  },
+  {
+    "key": "Prestataire médical",
+    "value": "Prestataire médical",
+    "original_key": "Furnizor medical",
+    "original_value": "Furnizor medical",
+    "type": "header"
+  },
+  {
+    "key": "Clinique",
+    "value": "Clinica ORL Dr. Mohsin Kaldas",
+    "original_key": "Clinică",
+    "original_value": "Clinica ORL Dr. Mohsin Kaldas",
+    "type": "text"
+  },
+  {
+    "key": "Spécialité",
+    "value": "Oto-rhino-laryngologie - oreille, nez et gorge",
+    "original_key": "Specialitate",
+    "original_value": "Otorinolaringologie - ureche, nas și gât",
+    "type": "text"
+  },
+  {
+    "key": "Adresse",
+    "value": "West Riffa, Royaume de Bahreïn",
+    "original_key": "Adresă",
+    "original_value": "West Riffa, Regatul Bahrain",
+    "type": "text"
+  },
+  {
+    "key": "Téléphone",
+    "value": "17274757 / 39820072",
+    "original_key": "Telefon",
+    "original_value": "17274757 / 39820072",
+    "type": "text"
+  },
+  {
+    "key": "Assurance / gestionnaire de sinistre",
+    "value": "Assurance / gestionnaire de sinistre",
+    "original_key": "Asigurare / administrator claim",
+    "original_value": "Asigurare / administrator claim",
+    "type": "header"
+  },
+  {
+    "key": "Compagnie / TPA",
+    "value": "BKIC / GlobeMed",
+    "original_key": "Companie / TPA",
+    "original_value": "BKIC / GlobeMed",
+    "type": "text"
+  },
+  {
+    "key": "Titulaire de la police",
+    "value": "Supreme Council for Women",
+    "original_key": "Deținător poliță",
+    "original_value": "Supreme Council for Women",
+    "type": "text"
+  },
+  {
+    "key": "Membre",
+    "value": "Données personnelles anonymisées",
+    "original_key": "Membru",
+    "original_value": "Date personale anonimizate",
+    "type": "text"
+  },
+  {
+    "key": "Type de demande",
+    "value": "Soins primaires - ambulatoire",
+    "original_key": "Tip claim",
+    "original_value": "Îngrijire primară - ambulatoriu",
+    "type": "text"
+  },
+  {
+    "key": "SYNTHÈSE FINANCIÈRE",
+    "value": "SYNTHÈSE FINANCIÈRE",
+    "original_key": "SINTEZĂ FINANCIARĂ",
+    "original_value": "SINTEZĂ FINANCIARĂ",
+    "type": "header"
+  },
+  {
+    "key": "TOTAL BRUT",
+    "value": "35.00 BD",
+    "original_key": "TOTAL BRUT",
+    "original_value": "35.00 BD",
+    "type": "text"
+  },
+  {
+    "key": "RÉDUCTIONS CONTRACTUELLES",
+    "value": "7.00 BD",
+    "original_key": "REDUCERI CONTRACTUALE",
+    "original_value": "7.00 BD",
+    "type": "text"
+  },
+  {
+    "key": "MONTANT NET DEMANDÉ",
+    "value": "19.80 BD",
+    "original_key": "SUMĂ NETĂ SOLICITATĂ",
+    "original_value": "19.80 BD",
+    "type": "text"
+  },
+  {
+    "key": "Tableau des services",
+    "value": "Consultation ORL - médecin spécialiste | 1 | 15.00 BD | 3.00 BD | 12.00 BD | Approuvé\nInjection Lincocin | 1 | 10.00 BD | 2.00 BD | 8.00 BD | Médicalement indiqué\nInjection Depo-Medrol | 1 | 10.00 BD | 2.00 BD | 8.00 BD | Médicalement indiqué\nTotal | | 35.00 BD | 7.00 BD | 28.00 BD | Avant déduction",
+    "original_key": "Services Table",
+    "original_value": "Consultație ORL - medic specialist | 1 | 15.00 BD | 3.00 BD | 12.00 BD | Aprobat\nInjecție Lincocin | 1 | 10.00 BD | 2.00 BD | 8.00 BD | Indicat medical\nInjecție Depo-Medrol | 1 | 10.00 BD | 2.00 BD | 8.00 BD | Indicat medical\nTotal | | 35.00 BD | 7.00 BD | 28.00 BD | Înainte de deducere",
+    "type": "table"
+  },
+  {
+    "key": "Déduction / quote-part du membre",
+    "value": "8.20 BD",
+    "original_key": "Deducere / coplată membru",
+    "original_value": "8.20 BD",
+    "type": "text"
+  },
+  {
+    "key": "Montant net à rembourser / à percevoir",
+    "value": "19.80 BD",
+    "original_key": "Suma netă de decontat / încasat",
+    "original_value": "19.80 BD",
+    "type": "text"
+  },
+  {
+    "key": "Confirmation du prestataire médical",
+    "value": "Confirmation du prestataire médical",
+    "original_key": "Confirmare furnizor medical",
+    "original_value": "Confirmare furnizor medical",
+    "type": "header"
+  },
+  {
+    "key": "Confirmation du prestataire médical - texte",
+    "value": "Je confirme que les services ci-dessus ont été fournis au patient à la date mentionnée.",
+    "original_key": "Confirmare furnizor medical - text",
+    "original_value": "Confirm că serviciile de mai sus au fost furnizate pacientului în data menționată.",
+    "type": "text"
+  },
+  {
+    "key": "Nom, signature et cachet",
+    "value": "",
+    "original_key": "Nume, semnătură și ștampilă",
+    "original_value": "",
+    "type": "signature"
+  },
+  {
+    "key": "Confirmation du membre / patient",
+    "value": "Confirmation du membre / patient",
+    "original_key": "Confirmare membru / pacient",
+    "original_value": "Confirmare membru / pacient",
+    "type": "header"
+  },
+  {
+    "key": "Confirmation du membre / patient - texte",
+    "value": "Je confirme la réception des services et l'exactitude des informations déclarées.",
+    "original_key": "Confirmare membru / pacient - text",
+    "original_value": "Confirm primirea serviciilor și corectitudinea informațiilor declarate.",
+    "type": "text"
+  },
+  {
+    "key": "Nom et signature du membre",
+    "value": "",
+    "original_key": "Nume și semnătură membru",
+    "original_value": "",
+    "type": "signature"
+  }
+]

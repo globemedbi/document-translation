@@ -1,0 +1,401 @@
+[
+  {
+    "key": "Medical Reimbursement Claim Form",
+    "value": "Medical Reimbursement Claim Form",
+    "original_key": "Formular de cerere de decontare medicală",
+    "original_value": "Formular de cerere de decontare medicală",
+    "type": "header"
+  },
+  {
+    "key": "Request No.",
+    "value": "5450",
+    "original_key": "Nr. cerere",
+    "original_value": "5450",
+    "type": "text"
+  },
+  {
+    "key": "Approval Ref.",
+    "value": "11165388",
+    "original_key": "Ref. aprobare",
+    "original_value": "11165388",
+    "type": "text"
+  },
+  {
+    "key": "Treatment Date",
+    "value": "09.11.2025",
+    "original_key": "Data tratamentului",
+    "original_value": "09.11.2025",
+    "type": "date"
+  },
+  {
+    "key": "Type",
+    "value": "Outpatient",
+    "original_key": "Tip",
+    "original_value": "Ambulatoriu",
+    "type": "text"
+  },
+  {
+    "key": "SECTION A - INSURED MEMBER DETAILS",
+    "value": "SECTION A - INSURED MEMBER DETAILS",
+    "original_key": "SECȚIUNEA A - DATELE MEMBRULUI ASIGURAT",
+    "original_value": "SECȚIUNEA A - DATELE MEMBRULUI ASIGURAT",
+    "type": "header"
+  },
+  {
+    "key": "MEMBER / PATIENT NAME",
+    "value": "Anonimizat",
+    "original_key": "NUME MEMBRU / PACIENT",
+    "original_value": "Anonimizat",
+    "type": "text"
+  },
+  {
+    "key": "MEMBER / CARD NUMBER",
+    "value": "Anonimizat",
+    "original_key": "NUMĂR MEMBRU / CARD",
+    "original_value": "Anonimizat",
+    "type": "text"
+  },
+  {
+    "key": "DATE OF BIRTH",
+    "value": "18.01.1981",
+    "original_key": "DATA NAȘTERII",
+    "original_value": "18.01.1981",
+    "type": "date"
+  },
+  {
+    "key": "GENDER - M",
+    "value": "☐ unchecked",
+    "original_key": "SEX - M",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "GENDER - F",
+    "value": "☑ checked",
+    "original_key": "SEX - F",
+    "original_value": "☑ checked",
+    "type": "checkbox"
+  },
+  {
+    "key": "INSURANCE COMPANY / TPA",
+    "value": "BKIC / GlobeMed",
+    "original_key": "COMPANIE DE ASIGURĂRI / TPA",
+    "original_value": "BKIC / GlobeMed",
+    "type": "text"
+  },
+  {
+    "key": "POLICY HOLDER",
+    "value": "Supreme Council for Women",
+    "original_key": "DEȚINATOR POLIȚA",
+    "original_value": "Supreme Council for Women",
+    "type": "text"
+  },
+  {
+    "key": "CPR / PASSPORT",
+    "value": "Anonimizat",
+    "original_key": "CPR / PAȘAPORT",
+    "original_value": "Anonimizat",
+    "type": "text"
+  },
+  {
+    "key": "MEMBER PHONE",
+    "value": "Anonimizat",
+    "original_key": "TELEFON MEMBRU",
+    "original_value": "Anonimizat",
+    "type": "text"
+  },
+  {
+    "key": "SECTION B - MEDICAL INFORMATION",
+    "value": "SECTION B - MEDICAL INFORMATION",
+    "original_key": "SECȚIUNEA B - INFORMAȚII MEDICALE",
+    "original_value": "SECȚIUNEA B - INFORMAȚII MEDICALE",
+    "type": "header"
+  },
+  {
+    "key": "Request Type",
+    "value": "Request Type",
+    "original_key": "Tip solicitare",
+    "original_value": "Tip solicitare",
+    "type": "header"
+  },
+  {
+    "key": "Inpatient",
+    "value": "☐ unchecked",
+    "original_key": "Internare",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Outpatient",
+    "value": "☑ checked",
+    "original_key": "Ambulatoriu",
+    "original_value": "☑ checked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Emergency",
+    "value": "☐ unchecked",
+    "original_key": "Urgență",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Treatment date",
+    "value": "09.11.2025",
+    "original_key": "Data tratamentului",
+    "original_value": "09.11.2025",
+    "type": "date"
+  },
+  {
+    "key": "Provider / clinic",
+    "value": "Clinica ORL Dr. Mohsin Kaldas",
+    "original_key": "Furnizor / clinică",
+    "original_value": "Clinica ORL Dr. Mohsin Kaldas",
+    "type": "text"
+  },
+  {
+    "key": "Attending physician",
+    "value": "Dr. Mohsin Kaldas",
+    "original_key": "Medic curant",
+    "original_value": "Dr. Mohsin Kaldas",
+    "type": "text"
+  },
+  {
+    "key": "Medical record number",
+    "value": "252.21",
+    "original_key": "Număr fișă medicală",
+    "original_value": "252.21",
+    "type": "text"
+  },
+  {
+    "key": "Conditions and vital signs",
+    "value": "Conditions and vital signs",
+    "original_key": "Condiții și semne vitale",
+    "original_value": "Condiții și semne vitale",
+    "type": "header"
+  },
+  {
+    "key": "Pre-existing condition - Yes",
+    "value": "☐ unchecked",
+    "original_key": "Afecțiune preexistentă - Da",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Pre-existing condition - No",
+    "value": "☑ checked",
+    "original_key": "Afecțiune preexistentă - Nu",
+    "original_value": "☑ checked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Work-related accident - Yes",
+    "value": "☐ unchecked",
+    "original_key": "Accident de muncă - Da",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Work-related accident - No",
+    "value": "☑ checked",
+    "original_key": "Accident de muncă - Nu",
+    "original_value": "☑ checked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Maternity - Yes",
+    "value": "☐ unchecked",
+    "original_key": "Maternitate - Da",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Maternity - No",
+    "value": "☑ checked",
+    "original_key": "Maternitate - Nu",
+    "original_value": "☑ checked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Blood pressure / pulse / temperature",
+    "value": "Not reported",
+    "original_key": "Tensiune / puls / temperatură",
+    "original_value": "Nu este raportat",
+    "type": "text"
+  },
+  {
+    "key": "REASON FOR CONSULTATION / PRESENTING SYMPTOMS",
+    "value": "ENT symptoms, ear blockage/discomfort. Medical evaluation requested to establish diagnosis and treatment.",
+    "original_key": "MOTIV CONSULTAȚIE / SIMPTOME PREZENTATE",
+    "original_value": "Simptome ORL, blocaj/disconfort auricular. Evaluare medicală solicitată pentru stabilirea diagnosticului și tratamentului.",
+    "type": "text"
+  },
+  {
+    "key": "FINAL DIAGNOSIS",
+    "value": "Acute serous otitis media",
+    "original_key": "DIAGNOSTIC FINAL",
+    "original_value": "Otită medie seroasă acută",
+    "type": "text"
+  },
+  {
+    "key": "Diagnosis code, if available",
+    "value": "H65.0",
+    "original_key": "Cod diagnostic, dacă este disponibil",
+    "original_value": "H65.0",
+    "type": "text"
+  },
+  {
+    "key": "SECTION C - TREATMENT, INVESTIGATIONS AND ESTIMATED COST",
+    "value": "SECTION C - TREATMENT, INVESTIGATIONS AND ESTIMATED COST",
+    "original_key": "SECȚIUNEA C - TRATAMENT, INVESTIGAȚII ȘI COST ESTIMAT",
+    "original_value": "SECȚIUNEA C - TRATAMENT, INVESTIGAȚII ȘI COST ESTIMAT",
+    "type": "header"
+  },
+  {
+    "key": "Treatment / service - ENT Consultation",
+    "value": "ENT Consultation",
+    "original_key": "Tratament / serviciu - Consultație ORL",
+    "original_value": "Consultație ORL",
+    "type": "table"
+  },
+  {
+    "key": "Category - ENT Consultation",
+    "value": "Specialist consultation",
+    "original_key": "Categorie - Consultație ORL",
+    "original_value": "Consultație specialist",
+    "type": "table"
+  },
+  {
+    "key": "Qty. - ENT Consultation",
+    "value": "1",
+    "original_key": "Cant. - Consultație ORL",
+    "original_value": "1",
+    "type": "table"
+  },
+  {
+    "key": "Gross cost - ENT Consultation",
+    "value": "15.00 BD",
+    "original_key": "Cost brut - Consultație ORL",
+    "original_value": "15.00 BD",
+    "type": "table"
+  },
+  {
+    "key": "Medical Justification - ENT Consultation",
+    "value": "Clinical evaluation",
+    "original_key": "Justificare medicală - Consultație ORL",
+    "original_value": "Evaluare clinică",
+    "type": "table"
+  },
+  {
+    "key": "Treatment / Service - Lincocin Injection",
+    "value": "Lincocin Injection",
+    "original_key": "Tratament / serviciu - Injecție Lincocin",
+    "original_value": "Injecție Lincocin",
+    "type": "table"
+  },
+  {
+    "key": "Category - Lincocin Injection",
+    "value": "Injections and infusions",
+    "original_key": "Categorie - Injecție Lincocin",
+    "original_value": "Injecții și perfuzii",
+    "type": "table"
+  },
+  {
+    "key": "Qty. - Lincocin Injection",
+    "value": "1",
+    "original_key": "Cant. - Injecție Lincocin",
+    "original_value": "1",
+    "type": "table"
+  },
+  {
+    "key": "Gross Cost - Lincocin Injection",
+    "value": "10.00 BD",
+    "original_key": "Cost brut - Injecție Lincocin",
+    "original_value": "10.00 BD",
+    "type": "table"
+  },
+  {
+    "key": "Medical Justification - Lincocin Injection",
+    "value": "Medically indicated",
+    "original_key": "Justificare medicală - Injecție Lincocin",
+    "original_value": "Indicat medical",
+    "type": "table"
+  },
+  {
+    "key": "Treatment / Service - Depo-Medrol Injection",
+    "value": "Depo-Medrol Injection",
+    "original_key": "Tratament / serviciu - Injecție Depo-Medrol",
+    "original_value": "Injecție Depo-Medrol",
+    "type": "table"
+  },
+  {
+    "key": "Category - Depo-Medrol Injection",
+    "value": "Injections and infusions",
+    "original_key": "Categorie - Injecție Depo-Medrol",
+    "original_value": "Injecții și perfuzii",
+    "type": "table"
+  },
+  {
+    "key": "Qty. - Depo-Medrol Injection",
+    "value": "1",
+    "original_key": "Cant. - Injecție Depo-Medrol",
+    "original_value": "1",
+    "type": "table"
+  },
+  {
+    "key": "Gross Cost - Depo-Medrol Injection",
+    "value": "10.00 BD",
+    "original_key": "Cost brut - Injecție Depo-Medrol",
+    "original_value": "10.00 BD",
+    "type": "table"
+  },
+  {
+    "key": "Medical Justification - Depo-Medrol Injection",
+    "value": "Medically indicated",
+    "original_key": "Justificare medicală - Injecție Depo-Medrol",
+    "original_value": "Indicat medical",
+    "type": "table"
+  },
+  {
+    "key": "Anticipated / Total Gross Cost",
+    "value": "35.00 BD",
+    "original_key": "Cost anticipat / total brut",
+    "original_value": "35.00 BD",
+    "type": "table"
+  },
+  {
+    "key": "Total Cost Justification",
+    "value": "Subject to eligibility review",
+    "original_key": "Justificare cost total",
+    "original_value": "Subiect al revizuirii de eligibilitate",
+    "type": "text"
+  },
+  {
+    "key": "Member Declaration",
+    "value": "I declare that the information provided is correct and complete and I authorise the medical provider, insurer, and claims administrator to verify the medical documents necessary for processing this claim.",
+    "original_key": "Declarația membrului",
+    "original_value": "Declar că informațiile furnizate sunt corecte și complete și autorizez furnizorul medical, asigurătorul și administratorul claimului să verifice documentele medicale necesare procesării acestei cereri.",
+    "type": "text"
+  },
+  {
+    "key": "Member Signature / Date",
+    "value": "",
+    "original_key": "Semnătură membru / dată",
+    "original_value": "",
+    "type": "signature"
+  },
+  {
+    "key": "Medical Provider Declaration",
+    "value": "I confirm that the services mentioned were medically necessary, provided on the indicated date, and documented in the patient's medical record.",
+    "original_key": "Declarația furnizorului medical",
+    "original_value": "Confirm că serviciile menționate au fost necesare medical, furnizate în data indicată și documentate în fișa pacientului.",
+    "type": "text"
+  },
+  {
+    "key": "Physician Name, Signature and Stamp",
+    "value": "",
+    "original_key": "Nume medic, semnătură și ștampilă",
+    "original_value": "",
+    "type": "signature"
+  }
+]

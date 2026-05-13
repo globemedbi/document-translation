@@ -1,0 +1,380 @@
+[
+  {
+    "key": "FORMULAIRE NATIONAL DE DEMANDE DE REMBOURSEMENT - SOINS MÉDICAUX PRIMAIRES",
+    "value": "FORMULAIRE NATIONAL DE DEMANDE DE REMBOURSEMENT - SOINS MÉDICAUX PRIMAIRES",
+    "original_key": "NATIONAL CLAIM FORM - PRIMARY MEDICAL CARE",
+    "original_value": "NATIONAL CLAIM FORM - PRIMARY MEDICAL CARE",
+    "type": "header"
+  },
+  {
+    "key": "N° de série",
+    "value": "",
+    "original_key": "Sr. No.",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "SECTION A : INFORMATIONS SUR LE MEMBRE (À REMPLIR PAR LE MEMBRE ASSURÉ)",
+    "value": "SECTION A : INFORMATIONS SUR LE MEMBRE (À REMPLIR PAR LE MEMBRE ASSURÉ)",
+    "original_key": "SECTION A: MEMBER DETAILS (TO BE FILLED BY THE INSURED MEMBER)",
+    "original_value": "SECTION A: MEMBER DETAILS (TO BE FILLED BY THE INSURED MEMBER)",
+    "type": "header"
+  },
+  {
+    "key": "Nom du membre",
+    "value": "[REDACTED]",
+    "original_key": "Member Name",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Nom de la compagnie d'assurance/TPA",
+    "value": "GIGI",
+    "original_key": "Insurance Company/TPA Name",
+    "original_value": "GIGI",
+    "type": "text"
+  },
+  {
+    "key": "Membre (N° ID/Carte)",
+    "value": "[REDACTED]",
+    "original_key": "Member (ID/Card No.)",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Titulaire de la police",
+    "value": "SUPREME COUNCIL FOR WOMEN-A",
+    "original_key": "Policy Holder",
+    "original_value": "SUPREME COUNCIL FOR WOMEN-A",
+    "type": "text"
+  },
+  {
+    "key": "Date de naissance",
+    "value": "[REDACTED]",
+    "original_key": "Date of Birth",
+    "original_value": "[REDACTED]",
+    "type": "date"
+  },
+  {
+    "key": "Sexe : M",
+    "value": "☐ non coché",
+    "original_key": "Gender: M",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Sexe : F",
+    "value": "☑ coché",
+    "original_key": "Gender: F",
+    "original_value": "☑ checked",
+    "type": "checkbox"
+  },
+  {
+    "key": "CPR/Passeport",
+    "value": "[REDACTED]",
+    "original_key": "CPR/Passport",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Célibataire",
+    "value": "☐ non coché",
+    "original_key": "Single",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Marié(e)",
+    "value": "☐ non coché",
+    "original_key": "Married",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Numéro de téléphone du membre",
+    "value": "[REDACTED]",
+    "original_key": "Member's Phone Number",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "SECTION B : SECTION MÉDICALE (À REMPLIR UNIQUEMENT PAR LE MÉDECIN TRAITANT)",
+    "value": "SECTION B : SECTION MÉDICALE (À REMPLIR UNIQUEMENT PAR LE MÉDECIN TRAITANT)",
+    "original_key": "SECTION B: MEDICAL SECTION (TO BE FILLED ONLY BY THE TREATING PHYSICIAN)",
+    "original_value": "SECTION B: MEDICAL SECTION (TO BE FILLED ONLY BY THE TREATING PHYSICIAN)",
+    "type": "header"
+  },
+  {
+    "key": "Veuillez cocher : Patient hospitalisé",
+    "value": "☐ non coché",
+    "original_key": "Please Tick: Inpatient",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Veuillez cocher : Patient ambulatoire",
+    "value": "☑ coché",
+    "original_key": "Please Tick: Outpatient",
+    "original_value": "☑ checked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Veuillez cocher : Cas d'urgence",
+    "value": "☐ non coché",
+    "original_key": "Please Tick: Emergency Case",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Nom du prestataire",
+    "value": "Dr. Mohsin Haleim",
+    "original_key": "Provider Name",
+    "original_value": "Dr. Mohsin Haleim",
+    "type": "text"
+  },
+  {
+    "key": "Date du traitement",
+    "value": "09.11.25",
+    "original_key": "Date of Treatment",
+    "original_value": "09.11.25",
+    "type": "date"
+  },
+  {
+    "key": "Numéro de dossier médical",
+    "value": "252-21",
+    "original_key": "Medical Record No",
+    "original_value": "252-21",
+    "type": "text"
+  },
+  {
+    "key": "Condition préexistante : Accident de la route",
+    "value": "☐ non coché",
+    "original_key": "Pre Existing Condition: RTA",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Signes vitaux",
+    "value": "",
+    "original_key": "Vital Signs",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Condition chronique : Accident du travail",
+    "value": "☐ non coché",
+    "original_key": "Chronic Condition: Work Related Accident",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Tension artérielle",
+    "value": "",
+    "original_key": "Blood Pressure",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Maternité : Date prévue d'accouchement",
+    "value": "",
+    "original_key": "Maternity: EDD",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Pouls",
+    "value": "",
+    "original_key": "Pulse",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Autres (veuillez préciser)",
+    "value": "",
+    "original_key": "Others (please specify)",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Température",
+    "value": "",
+    "original_key": "Temp",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Durée / Antécédents de la maladie",
+    "value": "",
+    "original_key": "Duration/History of illness",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Plainte principale et symptômes présentés",
+    "value": "Blotchy",
+    "original_key": "Main Complaint & Presenting Symptoms",
+    "original_value": "Blotchy",
+    "type": "text"
+  },
+  {
+    "key": "Constatations cliniques et diagnostic final (utiliser les codes CIM le cas échéant)",
+    "value": "Inj. Lincoin / Inj. Depomedrol",
+    "original_key": "Clinical Finding and Final Diagnosis (use ICD codes as appropriate)",
+    "original_value": "Inj. Lincoin / Inj. Depomedrol",
+    "type": "text"
+  },
+  {
+    "key": "SECTION DE PRÉ-AUTORISATION",
+    "value": "SECTION DE PRÉ-AUTORISATION (LE RAPPORT MÉDICAL ET D'INVESTIGATION DOIT ÊTRE JOINT LE CAS ÉCHÉANT)",
+    "original_key": "PRE-AUTHORIZATION SECTION",
+    "original_value": "PRE-AUTHORIZATION SECTION (MEDICAL & INVESTIGATION REPORT MUST BE ATTACHED WHERE APPLICABLE)",
+    "type": "header"
+  },
+  {
+    "key": "Durée de séjour prévue",
+    "value": "",
+    "original_key": "Anticipated Length of Stay",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Autorisation / Prescription",
+    "value": "au/la (handwritten)",
+    "original_key": "Authorization/Prescription",
+    "original_value": "au/la (handwritten)",
+    "type": "text"
+  },
+  {
+    "key": "COÛT ANTICIPÉ",
+    "value": "",
+    "original_key": "ANTICIPATED COST",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Code de forfait",
+    "value": "Balat (handwritten)",
+    "original_key": "Package Deal Code",
+    "original_value": "Balat (handwritten)",
+    "type": "text"
+  },
+  {
+    "key": "Déclaration du prestataire de services médicaux",
+    "value": "Déclaration du prestataire de services médicaux",
+    "original_key": "Medical Service Provider Declaration",
+    "original_value": "Medical Service Provider Declaration",
+    "type": "header"
+  },
+  {
+    "key": "Nom du médecin",
+    "value": "E.N.T CLINIC / DR. MOHSIN HAKEEM",
+    "original_key": "Name of Doctor",
+    "original_value": "E.N.T CLINIC / DR. MOHSIN HAKEEM",
+    "type": "text"
+  },
+  {
+    "key": "Signature (Médecin)",
+    "value": "DR. MOHSIN HAKEEM",
+    "original_key": "Signature (Doctor)",
+    "original_value": "DR. MOHSIN HAKEEM",
+    "type": "signature"
+  },
+  {
+    "key": "N° L. / Cachet & N° de licence",
+    "value": "11001834",
+    "original_key": "L.No. / Stamp & Licence No.",
+    "original_value": "11001834",
+    "type": "text"
+  },
+  {
+    "key": "Date (Médecin)",
+    "value": "",
+    "original_key": "Date (Doctor)",
+    "original_value": "",
+    "type": "date"
+  },
+  {
+    "key": "Signature (Membre)",
+    "value": "(signé)",
+    "original_key": "Signature (Member)",
+    "original_value": "(signed)",
+    "type": "signature"
+  },
+  {
+    "key": "Date (Membre)",
+    "value": "",
+    "original_key": "Date (Member)",
+    "original_value": "",
+    "type": "date"
+  },
+  {
+    "key": "RÉSERVÉ À L'USAGE DE LA COMPAGNIE D'ASSURANCE",
+    "value": "RÉSERVÉ À L'USAGE DE LA COMPAGNIE D'ASSURANCE",
+    "original_key": "FOR INSURANCE COMPANY USE ONLY",
+    "original_value": "FOR INSURANCE COMPANY USE ONLY",
+    "type": "header"
+  },
+  {
+    "key": "Commentaires",
+    "value": "",
+    "original_key": "Comments",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Approuvé",
+    "value": "☐ non coché",
+    "original_key": "Approved",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "Non approuvé",
+    "value": "☐ non coché",
+    "original_key": "Not Approved",
+    "original_value": "☐ unchecked",
+    "type": "checkbox"
+  },
+  {
+    "key": "N° d'approbation",
+    "value": "",
+    "original_key": "Approval No.",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Validité de l'approbation",
+    "value": "",
+    "original_key": "Approved Validity",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Agent d'assurance",
+    "value": "",
+    "original_key": "Insurance Officer",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Signature (Agent d'assurance)",
+    "value": "",
+    "original_key": "Signature (Insurance Officer)",
+    "original_value": "",
+    "type": "signature"
+  },
+  {
+    "key": "Date (Assurance)",
+    "value": "/ /",
+    "original_key": "Date (Insurance)",
+    "original_value": "/ /",
+    "type": "date"
+  },
+  {
+    "key": "N° de SINISTRE",
+    "value": "",
+    "original_key": "CLAIM No.",
+    "original_value": "",
+    "type": "text"
+  }
+]

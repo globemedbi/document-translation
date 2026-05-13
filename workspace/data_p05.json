@@ -1,0 +1,415 @@
+[
+  {
+    "key": "Dr. Mohsin Kaldas Clinic",
+    "value": "Dr. Mohsin Kaldas Clinic",
+    "original_key": "Dr. Mohsin Kaldas Clinic",
+    "original_value": "Dr. Mohsin Kaldas Clinic",
+    "type": "header"
+  },
+  {
+    "key": "Formulaire d'approbation",
+    "value": "Formulaire d'approbation",
+    "original_key": "Approval Form",
+    "original_value": "Approval Form",
+    "type": "header"
+  },
+  {
+    "key": "Référence#",
+    "value": "11165388",
+    "original_key": "Reference#",
+    "original_value": "11165388",
+    "type": "text"
+  },
+  {
+    "key": "Numéro individuel",
+    "value": "17318013",
+    "original_key": "Individual Number",
+    "original_value": "17318013",
+    "type": "text"
+  },
+  {
+    "key": "Nom du titulaire de la carte",
+    "value": "[REDACTED]",
+    "original_key": "Card Holder Name",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Date de naissance",
+    "value": "18/01/1981",
+    "original_key": "Date Of Birth",
+    "original_value": "18/01/1981",
+    "type": "date"
+  },
+  {
+    "key": "Compagnie d'assurance",
+    "value": "BKIC",
+    "original_key": "Insurance Co.",
+    "original_value": "BKIC",
+    "type": "text"
+  },
+  {
+    "key": "Médecin",
+    "value": "MOHSIN KALDAS",
+    "original_key": "Physician",
+    "original_value": "MOHSIN KALDAS",
+    "type": "text"
+  },
+  {
+    "key": "Date d'approbation",
+    "value": "09/11/2025",
+    "original_key": "Approval Date",
+    "original_value": "09/11/2025",
+    "type": "date"
+  },
+  {
+    "key": "Date d'approbation (fin)",
+    "value": "31/12/2025",
+    "original_key": "Approval Date (End)",
+    "original_value": "31/12/2025",
+    "type": "date"
+  },
+  {
+    "key": "Service",
+    "value": "Service",
+    "original_key": "Service",
+    "original_value": "Service",
+    "type": "header"
+  },
+  {
+    "key": "Article",
+    "value": "Article",
+    "original_key": "Item",
+    "original_value": "Item",
+    "type": "header"
+  },
+  {
+    "key": "Qté réclamée",
+    "value": "Qté réclamée",
+    "original_key": "Qty Clm",
+    "original_value": "Qty Clm",
+    "type": "header"
+  },
+  {
+    "key": "Qté approuvée",
+    "value": "Qté approuvée",
+    "original_key": "Qty App",
+    "original_value": "Qty App",
+    "type": "header"
+  },
+  {
+    "key": "Statut",
+    "value": "Statut",
+    "original_key": "Status",
+    "original_value": "Status",
+    "type": "header"
+  },
+  {
+    "key": "Notes",
+    "value": "Notes",
+    "original_key": "Notes",
+    "original_value": "Notes",
+    "type": "header"
+  },
+  {
+    "key": "Motif",
+    "value": "Motif",
+    "original_key": "Reason",
+    "original_value": "Reason",
+    "type": "header"
+  },
+  {
+    "key": "Ligne de service 1 - Service",
+    "value": "CONSULTATION-CONSULTANT",
+    "original_key": "Service Row 1 - Service",
+    "original_value": "CONSULTATION-CONSULTANT",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 1 - Article",
+    "value": "Visite de consultation - Consultant",
+    "original_key": "Service Row 1 - Item",
+    "original_value": "Consultation visit Consultant",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 1 - Qté réclamée",
+    "value": "[REDACTED]",
+    "original_key": "Service Row 1 - Qty Clm",
+    "original_value": "[REDACTED]",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 1 - Qté approuvée",
+    "value": "1",
+    "original_key": "Service Row 1 - Qty App",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 1 - Statut",
+    "value": "Approuvé",
+    "original_key": "Service Row 1 - Status",
+    "original_value": "Approved",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Service",
+    "value": "INJECTIONS ET PERFUSIONS",
+    "original_key": "Service Row 2 - Service",
+    "original_value": "INJECTIONS AND INFUSIONS",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 1",
+    "value": "LINCOCIN",
+    "original_key": "Service Row 2 - Item 1",
+    "original_value": "LINCOCIN",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 1 Qté réclamée",
+    "value": "1",
+    "original_key": "Service Row 2 - Item 1 Qty Clm",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 1 Qté approuvée",
+    "value": "1",
+    "original_key": "Service Row 2 - Item 1 Qty App",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 1 Statut",
+    "value": "Approuvé",
+    "original_key": "Service Row 2 - Item 1 Status",
+    "original_value": "Approved",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 2",
+    "value": "Depomedrol",
+    "original_key": "Service Row 2 - Item 2",
+    "original_value": "Depomedrol",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 2 Qté réclamée",
+    "value": "1",
+    "original_key": "Service Row 2 - Item 2 Qty Clm",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 2 Qté approuvée",
+    "value": "1",
+    "original_key": "Service Row 2 - Item 2 Qty App",
+    "original_value": "1",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 2 Statut",
+    "value": "Approuvé",
+    "original_key": "Service Row 2 - Item 2 Status",
+    "original_value": "Approved",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de service 2 - Article 2 Remarques",
+    "value": "Test indiqué",
+    "original_key": "Service Row 2 - Item 2 Notes",
+    "original_value": "Test Indicated",
+    "type": "text"
+  },
+  {
+    "key": "Détails de la couverture",
+    "value": "Détails de la couverture",
+    "original_key": "Coverage Details",
+    "original_value": "Coverage Details",
+    "type": "header"
+  },
+  {
+    "key": "Notes importantes",
+    "value": "Notes importantes",
+    "original_key": "Important Notes",
+    "original_value": "Important Notes",
+    "type": "header"
+  },
+  {
+    "key": "Veuillez joindre les documents requis lors de la soumission de la réclamation",
+    "value": "Veuillez joindre les documents requis lors de la soumission de la réclamation",
+    "original_key": "Please Attach the required documents upon submission of claim",
+    "original_value": "Please Attach the required documents upon submission of claim",
+    "type": "text"
+  },
+  {
+    "key": "1-Formulaire d'approbation",
+    "value": "1-Formulaire d'approbation",
+    "original_key": "1-Approval Form",
+    "original_value": "1-Approval Form",
+    "type": "text"
+  },
+  {
+    "key": "2-Copie de la carte d'identité et/ou du passeport, CPR, permis de conduire",
+    "value": "2-Copie de la carte d'identité et/ou du passeport, CPR, permis de conduire",
+    "original_key": "2-Copy of the identification card &/or passport,CPR,Driving license",
+    "original_value": "2-Copy of the identification card &/or passport,CPR,Driving license",
+    "type": "text"
+  },
+  {
+    "key": "3-Formulaire de réclamation",
+    "value": "3-Formulaire de réclamation",
+    "original_key": "3-Claim Form",
+    "original_value": "3-Claim Form",
+    "type": "text"
+  },
+  {
+    "key": "4-Copie de la carte d'assurance",
+    "value": "4-Copie de la carte d'assurance",
+    "original_key": "4-Copy of Insurance Card",
+    "original_value": "4-Copy of Insurance Card",
+    "type": "text"
+  },
+  {
+    "key": "5-Rapport médical et résultats du test demandé, le cas échéant",
+    "value": "5-Rapport médical et résultats du test demandé, le cas échéant",
+    "original_key": "5-Medical Report and Results of the requested test-if any",
+    "original_value": "5-Medical Report and Results of the requested test-if any",
+    "type": "text"
+  },
+  {
+    "key": "6-Résumé de sortie",
+    "value": "6-Résumé de sortie",
+    "original_key": "6-Discharge Summary",
+    "original_value": "6-Discharge Summary",
+    "type": "text"
+  },
+  {
+    "key": "Diagnostic",
+    "value": "Diagnostic",
+    "original_key": "Diagnosis",
+    "original_value": "Diagnosis",
+    "type": "header"
+  },
+  {
+    "key": "Ligne de diagnostic 1",
+    "value": "Otite moyenne séreuse aiguë",
+    "original_key": "Diagnosis Line 1",
+    "original_value": "Acute serous otitis media",
+    "type": "text"
+  },
+  {
+    "key": "Ligne de diagnostic 2",
+    "value": "Otite moyenne séreuse aiguë",
+    "original_key": "Diagnosis Line 2",
+    "original_value": "Acute serous otitis media",
+    "type": "text"
+  },
+  {
+    "key": "Informations médicales",
+    "value": "Informations médicales",
+    "original_key": "Medical Information",
+    "original_value": "Medical Information",
+    "type": "header"
+  },
+  {
+    "key": "Date",
+    "value": "",
+    "original_key": "Date",
+    "original_value": "",
+    "type": "date"
+  },
+  {
+    "key": "TA",
+    "value": "",
+    "original_key": "BP",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Pouls",
+    "value": "",
+    "original_key": "Pulse",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Température",
+    "value": "",
+    "original_key": "Temperature",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Durée de la maladie",
+    "value": "",
+    "original_key": "Illness Duration",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Plaintes",
+    "value": "",
+    "original_key": "Complaints",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Signes",
+    "value": "",
+    "original_key": "Signs",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Autres",
+    "value": "",
+    "original_key": "Others",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Fichiers téléchargés",
+    "value": "",
+    "original_key": "Uploaded Files",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "Informations supplémentaires",
+    "value": "",
+    "original_key": "Additional Info",
+    "original_value": "",
+    "type": "text"
+  },
+  {
+    "key": "%09%09",
+    "value": "%09%09",
+    "original_key": "%09%09",
+    "original_value": "%09%09",
+    "type": "text"
+  },
+  {
+    "key": "Avertissement",
+    "value": "En cas d'approbation, cette demande est soumise à un examen concernant le tarif, les remises et la nécessité médicale – habituelle, raisonnable et conforme aux pratiques courantes.",
+    "original_key": "Disclaimer",
+    "original_value": "In case of approval, this claim is subject to review for Tariff, Discounts and Medical Necessity – Usual, Reasonable and Customary.",
+    "type": "text"
+  },
+  {
+    "key": "Merci",
+    "value": "Merci.",
+    "original_key": "Thank You",
+    "original_value": "Thank You.",
+    "type": "text"
+  },
+  {
+    "key": "Avis TVA",
+    "value": "Cette demande est soumise aux termes et conditions de TVA du Royaume de Bahreïn.",
+    "original_key": "VAT Notice",
+    "original_value": "This claim is subject to VAT terms and conditions of Kingdom of Bahrain",
+    "type": "text"
+  }
+]
