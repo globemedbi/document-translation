@@ -1,0 +1,11 @@
+output/
+workspace/
+.git/
+.claude/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.env
+.DS_Store
+*.log

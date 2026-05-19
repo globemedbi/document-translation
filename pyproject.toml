@@ -5,6 +5,7 @@ description = "PDF form translation — vision overlay and PAO coding agent mode
 requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.40.0",
+    "openai>=1.0.0",
     "python-dotenv>=1.0.0",
     "pymupdf>=1.24.0",
     "Pillow>=10.0.0",

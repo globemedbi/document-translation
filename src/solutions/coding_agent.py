@@ -17,8 +17,6 @@ Per-page DOCX files are merged into one final document, then PDF conversion
 is attempted via docx2pdf.
 """
 
-import base64
-import io
 import json
 import re
 import shutil
@@ -28,22 +26,23 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 
-import anthropic
 from loguru import logger
 from rich.console import Console
 from rich.panel import Panel
 
-from src.config import settings
+from src.config import get_client, settings
+from src.llm.schema.layout import LayoutPlan
 from src.llm.schema.observer import ObserverResult
-from src.llm.structured import structured_call
+from src.llm.structured import chat, image_block_from_bytes, structured_call
 from src.models import TranslatedDocument, TranslatedPage
 
 console = Console()
 
 # ── Models ────────────────────────────────────────────────────────────────────
 
-_SONNET = settings.anthropic_model  # fast, per-page code gen
-_OPUS = settings.anthropic_heavy_model  # heavy: plan + observe
+_CODER = settings.coding_model  # code generation (o3)
+_SONNET = settings.model        # observe + misc (gpt-5.5)
+_OPUS = settings.heavy_model    # plan (gpt-5.5)
 
 
 # ── System prompts ────────────────────────────────────────────────────────────
@@ -53,18 +52,17 @@ You are a document layout expert and visual designer. You receive:
   - An image of ONE page of a medical/insurance form
   - The translated field data for that page (JSON list)
 
-Analyse the visual structure and produce a precise layout plan (15-25 lines).
-The plan MUST include:
-  1. Overall page structure (sections, columns, full-width vs split layout)
-  2. Exact table dimensions: rows × columns, estimated column widths as percentages
-  3. For each section: which data fields go where (by their exact "key" from the JSON)
-  4. RTL (right-to-left) blocks: exact location and which fields they contain
-  5. Typography: approximate font sizes (large header ≈ 14pt, body ≈ 10pt, small ≈ 8pt)
-  6. Visual elements: borders, shading, dividers, logo placeholders, signature lines
-  7. Checkbox fields: how to represent checked/unchecked state
+Analyse the visual structure and fill every field of the structured layout plan:
 
-Be SPECIFIC about dimensions and positions so the coder can reproduce the layout faithfully.
-Output ONLY the layout plan — no code, no markdown headers.
+- header: describe the page header — title text, logo position (left/right/center), any reference numbers shown, background color, font color
+- footer: describe the footer content and styling, or write "none"
+- layout: overall page structure — number of sections, LTR or RTL reading direction, column layout, approximate margins
+- colors: one entry per distinct colored element (page header, section headers, footer, highlighted rows, etc.) — use exact hex codes where visible, or best estimates
+- tables: ALL tables top to bottom — for each: exact row/col counts, column widths as percentages (must sum to 100), header row colors, which field keys belong in which table (use EXACT key strings from the JSON)
+- images: logo or image placements with position, or "none"
+- content: anything outside tables — standalone labels, signature lines, checkboxes not in a table, divider lines, instructional text
+
+Be PRECISE. Every field key from the JSON must appear in exactly one table's fields list or in content.
 """
 
 _CODER_SYSTEM = """\
@@ -75,8 +73,10 @@ INPUT: page image (visual reference), layout plan, translated field data (JSON),
 SCRIPT STRUCTURE:
   import json
   from docx import Document
-  from docx.shared import Pt, Cm
+  from docx.shared import Pt, Cm, RGBColor
   from docx.enum.text import WD_ALIGN_PARAGRAPH
+  from docx.oxml.ns import qn
+  from docx.oxml import OxmlElement
   DATA_FILE = "..."
   OUTPUT_PATH = "..."
   DATA = json.load(open(DATA_FILE, encoding="utf-8"))
@@ -85,6 +85,17 @@ SCRIPT STRUCTURE:
   # ... build document ...
   doc.save(OUTPUT_PATH)
   print("SUCCESS: saved to " + OUTPUT_PATH)
+
+COLORS — always reproduce the original design:
+- Set cell background: use this helper:
+    def set_cell_bg(cell, hex_color):
+        tc = cell._tc; tcPr = tc.get_or_add_tcPr()
+        shd = OxmlElement("w:shd")
+        shd.set(qn("w:val"), "clear"); shd.set(qn("w:color"), "auto"); shd.set(qn("w:fill"), hex_color)
+        tcPr.append(shd)
+- Set font color: run.font.color.rgb = RGBColor(0xRR, 0xGG, 0xBB)
+- Header cells with dark background MUST have white font color
+- Apply colors as described in the layout plan — never leave headers plain white if the original is colored
 
 RULES:
 - Match the visual layout: same tables, same columns, same font sizes (~12pt headers, ~9pt body)
@@ -308,40 +319,7 @@ def _run_script(script_path: Path) -> tuple[bool, str]:
         return False, str(exc)
 
 
-# ── Image helpers ─────────────────────────────────────────────────────────────
-
-
-def _img_block_from_path(path: Path) -> dict:
-    data = base64.b64encode(path.read_bytes()).decode()
-    return {
-        "type": "image",
-        "source": {"type": "base64", "media_type": "image/png", "data": data},
-    }
-
-
-def _img_block_from_docx(docx_path: Path) -> dict | None:
-    """Render the first page of a DOCX as an image for observation."""
-    try:
-        import fitz  # PyMuPDF — may not be installed
-
-        # docx2pdf first, then render
-        pdf_path = docx_path.with_suffix(".tmp.pdf")
-        from docx2pdf import convert
-
-        convert(str(docx_path), str(pdf_path))
-        if not pdf_path.exists():
-            return None
-        doc = fitz.open(str(pdf_path))
-        pix = doc[0].get_pixmap(dpi=120)
-        doc.close()
-        pdf_path.unlink(missing_ok=True)
-        data = base64.b64encode(pix.tobytes("png")).decode()
-        return {
-            "type": "image",
-            "source": {"type": "base64", "media_type": "image/png", "data": data},
-        }
-    except Exception:
-        return None
+# ── PAO per-page builder ──────────────────────────────────────────────────────
 
 
 # ── PAO per-page builder ──────────────────────────────────────────────────────
@@ -354,13 +332,16 @@ class _PagePAO:
 
     def __init__(
         self,
-        client: anthropic.Anthropic,
+        client: Any,
         workspace: Path,
         max_iterations: int,
     ) -> None:
         self.client = client
         self.workspace = workspace
         self.max_iterations = max_iterations
+
+    def _img_block(self, path: Path) -> dict:
+        return image_block_from_bytes(self.client, path.read_bytes())
 
     # ── Public entry point ────────────────────────────────────────────────────
 
@@ -442,6 +423,12 @@ class _PagePAO:
             # ── OBSERVE ──────────────────────────────────────────────────────
             logger.info(f"[P{page_num}] OBSERVE — checking output …")
             obs = self._observe(page_num, img_path, output_path, target_language, iteration)
+
+            if obs is None:
+                # Observer failed — keep best result, skip this iteration without new feedback
+                logger.warning(f"[P{page_num}] Observer failed — keeping best result so far")
+                continue
+
             score = obs.score
             feedback = obs.feedback
             missing = obs.missing_fields
@@ -464,6 +451,15 @@ class _PagePAO:
                     f"[P{page_num}] ✓ Accepted (score={score}, threshold={accept_threshold})"
                 )
                 return output_path
+
+            # Regression guard: if score dropped with no concrete issues, revert to best
+            if score < best_score and not missing and not wrong:
+                logger.warning(
+                    f"[P{page_num}] Score regression ({best_score}→{score}) with no specific issues — reverting to best"
+                )
+                if best_output and best_output.exists():
+                    shutil.copy2(best_output, output_path)
+                break
 
             # Build targeted feedback listing ALL missing keys so Claude can add them
             observer_feedback = (
@@ -491,28 +487,31 @@ class _PagePAO:
             ensure_ascii=False,
         )
         try:
-            resp = self.client.messages.create(
-                model=_SONNET,
-                max_tokens=1024,
-                system=_PLANNER_SYSTEM,
+            plan = structured_call(
+                self.client,
+                _OPUS,
                 messages=[
                     {
                         "role": "user",
                         "content": [
-                            _img_block_from_path(img_path),
+                            self._img_block(img_path),
                             {
                                 "type": "text",
                                 "text": (
                                     f"PAGE {page_num} — {len(fields)} translated fields.\n"
-                                    f"Fields overview: {field_summary[:1000]}\n\n"
-                                    f"Produce the layout plan for this page."
+                                    f"Fields (key + type): {field_summary}\n\n"
+                                    f"Analyse the page image and fill the structured layout plan."
                                 ),
                             },
                         ],
                     }
                 ],
+                schema=LayoutPlan,
+                system=_PLANNER_SYSTEM,
+                max_tokens=8192,
+                reasoning_effort="medium",
             )
-            return resp.content[0].text.strip()
+            return plan.model_dump_json(indent=2)
         except Exception as exc:
             logger.warning(f"[P{page_num}] Plan failed: {exc} — using minimal plan")
             return f"Page {page_num}: {len(fields)} fields in a form layout. Use a table-based structure."
@@ -544,12 +543,15 @@ class _PagePAO:
             feedback_block += f"=== OBSERVER FEEDBACK (rewrite the full script addressing this) ===\n{observer_feedback}\n\n"
 
         content: list[dict] = [
-            _img_block_from_path(img_path),
+            self._img_block(img_path),
             {
                 "type": "text",
                 "text": (
                     f"{feedback_block}"
-                    f"=== LAYOUT PLAN ===\n{plan[:1000]}\n\n"
+                    f"=== LAYOUT PLAN (JSON) ===\n{plan}\n\n"
+                    f"The plan above defines: header, footer, layout, colors (hex per section), "
+                    f"tables (rows/cols/widths/field keys), images, and non-table content.\n"
+                    f"Follow it precisely — use the colors, table dimensions, and field assignments exactly.\n\n"
                     f"PAGE {page_num} — {len(data_raw)} fields\n"
                     f"OUTPUT_PATH = {str(output_path)!r}\n"
                     f"DATA_FILE = {str(data_file)!r}\n\n"
@@ -557,24 +559,21 @@ class _PagePAO:
                     f"{data_sample}\n"
                     f"=== END DATA ===\n\n"
                     f"Write the complete python-docx script. "
-                    f"Match the visual layout from the image. "
-                    f"Every field in DATA must appear in the output."
+                    f"Every field in DATA must appear. Every table in the plan must be built. "
+                    f"Every color in the plan must be applied."
                 ),
             },
         ]
 
-        resp = self.client.messages.create(
-            model=_SONNET,
-            max_tokens=16000,
-            system=system,
+        code = chat(
+            self.client,
+            _CODER,
             messages=[{"role": "user", "content": content}],
+            system=system,
+            max_tokens=16000,
+            reasoning_effort="medium",
         )
-        code = _strip_fences(resp.content[0].text)
-        if resp.stop_reason == "max_tokens":
-            logger.warning(
-                f"[P{page_num}] CODE generation still hit max_tokens at 16000 — page too complex"
-            )
-        return code
+        return _strip_fences(code)
 
     # ── OBSERVE ───────────────────────────────────────────────────────────────
 
@@ -584,8 +583,8 @@ class _PagePAO:
         img_path: Path,
         output_path: Path,
         target_language: str,
-        iteration: int,
-    ) -> ObserverResult:
+        iteration: int,  # noqa: ARG002
+    ) -> ObserverResult | None:
         if not output_path.exists():
             return ObserverResult(
                 score=1,
@@ -596,7 +595,7 @@ class _PagePAO:
         docx_text = _dump_docx_text(output_path)
 
         content: list[dict] = [
-            _img_block_from_path(img_path),
+            self._img_block(img_path),
             {
                 "type": "text",
                 "text": (
@@ -620,15 +619,12 @@ class _PagePAO:
                 messages=[{"role": "user", "content": content}],
                 schema=ObserverResult,
                 system=_OBSERVER_SYSTEM,
-                max_tokens=1024,
+                max_tokens=4096,
+                reasoning_effort="low",
             )
         except Exception as exc:
             logger.warning(f"[P{page_num}] Observer error: {exc}")
-            return ObserverResult(
-                score=5,
-                is_done=False,
-                feedback=f"Observer failed: {exc}",
-            )
+            return None
 
 
 # ── Main agent ────────────────────────────────────────────────────────────────
@@ -641,12 +637,13 @@ class PAOCodingAgent:
     """
 
     def __init__(self) -> None:
-        self.client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
+        self.client = get_client()
         self.workspace = settings.agent_workspace.resolve()
         self.workspace.mkdir(parents=True, exist_ok=True)
         self.max_iterations = settings.max_agent_iterations
         logger.info(
-            f"PAOCodingAgent ready (workspace={self.workspace}, max_iter={self.max_iterations})"
+            f"PAOCodingAgent ready (provider={settings.llm_provider}, model={settings.model}, "
+            f"heavy={settings.heavy_model}, workspace={self.workspace}, max_iter={self.max_iterations})"
         )
 
     def run(

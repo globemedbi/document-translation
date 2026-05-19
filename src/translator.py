@@ -1,11 +1,11 @@
 from __future__ import annotations
 
 import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-import anthropic
 from loguru import logger
 
-from src.config import settings
+from src.config import get_client, settings
 from src.llm.schema.translation import TranslationBatchResponse, TranslationItem
 from src.llm.structured import structured_call
 from src.models import (
@@ -43,33 +43,38 @@ _BATCH_SIZE = 20
 
 class Translator:
     def __init__(self) -> None:
-        self.client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
-        self.model = settings.anthropic_model
+        self.client = get_client()
+        self.model = settings.model
         self.language = settings.target_language
-        logger.info(f"Translator initialised (model={self.model}, lang={self.language})")
+        logger.info(f"Translator initialised (provider={settings.llm_provider}, model={self.model}, lang={self.language})")
 
     # ── Public ────────────────────────────────────────────────────────────────
 
     def translate_document(self, extraction: DocumentExtraction) -> TranslatedDocument:
-        logger.info(f"=== TRANSLATION START → {self.language} ===")
-        translated_pages: list[TranslatedPage] = []
+        logger.info(f"=== TRANSLATION START → {self.language} ({len(extraction.pages)} pages in parallel) ===")
 
-        for page in extraction.pages:
+        def _translate_page(page: any) -> TranslatedPage:
             logger.info(
                 f"Translating page {page.page_number}/{extraction.total_pages} "
                 f"({len(page.fields)} fields) …"
             )
             t_fields = self._translate_fields(page.fields)
-            translated_pages.append(
-                TranslatedPage(
-                    page_number=page.page_number,
-                    width_px=page.width_px,
-                    height_px=page.height_px,
-                    translated_fields=t_fields,
-                )
-            )
             logger.info(f"  → page {page.page_number} done ({len(t_fields)} fields)")
+            return TranslatedPage(
+                page_number=page.page_number,
+                width_px=page.width_px,
+                height_px=page.height_px,
+                translated_fields=t_fields,
+            )
 
+        with ThreadPoolExecutor(max_workers=len(extraction.pages)) as executor:
+            futures = {executor.submit(_translate_page, page): page.page_number for page in extraction.pages}
+            results: dict[int, TranslatedPage] = {}
+            for future in as_completed(futures):
+                tp = future.result()
+                results[tp.page_number] = tp
+
+        translated_pages = [results[p.page_number] for p in extraction.pages]
         total = sum(len(p.translated_fields) for p in translated_pages)
         logger.info(f"=== TRANSLATION DONE: {total} fields → {self.language} ===")
 
@@ -85,15 +90,17 @@ class Translator:
         if not fields:
             return []
 
-        results: list[TranslatedField] = []
-        for batch_start in range(0, len(fields), _BATCH_SIZE):
-            batch = fields[batch_start : batch_start + _BATCH_SIZE]
-            logger.debug(
-                f"  batch {batch_start // _BATCH_SIZE + 1}: "
-                f"fields {batch_start}–{batch_start + len(batch) - 1}"
-            )
-            results.extend(self._translate_batch(batch))
-        return results
+        batches = [fields[i : i + _BATCH_SIZE] for i in range(0, len(fields), _BATCH_SIZE)]
+        if len(batches) == 1:
+            return self._translate_batch(batches[0])
+
+        batch_results: dict[int, list[TranslatedField]] = {}
+        with ThreadPoolExecutor(max_workers=len(batches)) as executor:
+            futures = {executor.submit(self._translate_batch, batch): idx for idx, batch in enumerate(batches)}
+            for future in as_completed(futures):
+                batch_results[futures[future]] = future.result()
+
+        return [field for idx in range(len(batches)) for field in batch_results[idx]]
 
     def _translate_batch(self, fields: list[FormField]) -> list[TranslatedField]:
         payload = [
@@ -113,11 +120,9 @@ class Translator:
                 schema=TranslationBatchResponse,
                 system=_SYSTEM,
                 max_tokens=4096,
+                reasoning_effort="low",
             )
             translations = result.items
-        except anthropic.APIError as exc:
-            logger.error(f"API error during translation batch: {exc}")
-            return self._fallback(fields)
         except Exception as exc:
             logger.error(f"Error during translation batch: {exc}")
             return self._fallback(fields)

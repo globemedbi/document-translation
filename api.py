@@ -3,7 +3,7 @@ PDF Translator — FastAPI backend.
 
 Single endpoint: POST /translate
   - Accepts a PDF + language + mode as multipart form data
-  - API key is read from .env (ANTHROPIC_API_KEY) — not required in the request
+  - API key is read from environment (OPENAI_API_KEY or ANTHROPIC_API_KEY) — not required in the request
   - Runs the pipeline synchronously and returns the translated file directly
 
 Run with:
@@ -48,11 +48,14 @@ async def translate(
 ) -> FileResponse:
     """
     Upload a PDF and get back the translated file.
-    API key is read from ANTHROPIC_API_KEY in .env.
+    API key is read from OPENAI_API_KEY or ANTHROPIC_API_KEY environment variable.
     mode: AUTO | TEXT | VISION | CODING
     """
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        raise HTTPException(500, "ANTHROPIC_API_KEY not set — add it to your .env file.")
+    provider = os.environ.get("LLM_PROVIDER", "anthropic").lower()
+    if provider == "openai" and not os.environ.get("OPENAI_API_KEY"):
+        raise HTTPException(500, "OPENAI_API_KEY not set.")
+    if provider != "openai" and not os.environ.get("ANTHROPIC_API_KEY"):
+        raise HTTPException(500, "ANTHROPIC_API_KEY not set.")
 
     fname = file.filename or "document.pdf"
     if not fname.lower().endswith(".pdf"):

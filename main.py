@@ -71,10 +71,11 @@ def main(pdf_path: Path, output: Path | None, mode: str | None, language: str | 
 
     console.print(Panel(
         f"[bold]PDF Form Translator[/bold]\n\n"
-        f"  Input   : {pdf_path}\n"
-        f"  Mode    : [cyan]{settings.solution_mode.value}[/cyan]\n"
-        f"  Language: [cyan]{settings.target_language}[/cyan]\n"
-        f"  Model   : [cyan]{settings.anthropic_model}[/cyan]",
+        f"  Input        : {pdf_path}\n"
+        f"  Mode         : [cyan]{settings.solution_mode.value}[/cyan]\n"
+        f"  Language     : [cyan]{settings.target_language}[/cyan]\n"
+        f"  Model        : [cyan]{settings.model}[/cyan]\n"
+        f"  Coding model : [cyan]{settings.coding_model}[/cyan]",
         title="Configuration",
         style="bold white",
     ))

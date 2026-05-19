@@ -19,11 +19,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import NamedTuple
 
-import anthropic
 import fitz
 from loguru import logger
 
-from src.config import settings
+from src.config import get_client, settings
 from src.llm.schema.text_translation import TextTranslationResponse
 from src.llm.structured import structured_call
 
@@ -49,11 +48,11 @@ class TextLayerTranslator:
     """
 
     def __init__(self) -> None:
-        self.client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
+        self.client = get_client()
         self.target_language = settings.target_language
         logger.info(
             f"TextLayerTranslator initialised "
-            f"(model={settings.anthropic_model}, lang={self.target_language})"
+            f"(provider={settings.llm_provider}, model={settings.model}, lang={self.target_language})"
         )
 
     def translate(self, pdf_path: Path, output_path: Path) -> Path:
@@ -117,10 +116,11 @@ class TextLayerTranslator:
         try:
             result = structured_call(
                 self.client,
-                settings.anthropic_model,
+                settings.model,
                 messages=[{"role": "user", "content": prompt}],
                 schema=TextTranslationResponse,
                 max_tokens=4096,
+                reasoning_effort="low",
             )
             return {item.original: item.translated for item in result.translations}
         except Exception as exc:

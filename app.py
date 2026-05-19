@@ -99,10 +99,10 @@ def main() -> None:
                 f"{backend.rstrip('/')}/translate",
                 data={"language": language, "mode": mode},
                 files={"file": (uploaded.name, uploaded.getvalue(), "application/pdf")},
-                timeout=600.0,  # up to 10 min for CODING mode
+                timeout=1800.0,  # up to 30 min (high reasoning effort needs more time)
             )
         except httpx.TimeoutException:
-            st.error("Request timed out. Try VISION or TEXT mode for faster results.")
+            st.error("Request timed out. Please try again.")
             return
         except Exception as exc:
             st.error(f"Request failed: {exc}")

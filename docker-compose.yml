@@ -4,13 +4,29 @@ services:
     command: uv run uvicorn api:app --host 0.0.0.0 --port 8000
     ports:
       - "8000:8000"
-    env_file: .env
+    environment:
+      - LLM_PROVIDER=openai
+      - OPENAI_API_KEY=<your_api_key>
+      - OPENAI_HEAVY_MODEL=gpt-5.5
+      - ANTHROPIC_API_KEY=
+      - TARGET_LANGUAGE=French
+      - SOLUTION_MODE=VISION
+      - OUTPUT_DIR=output
+      - AGENT_WORKSPACE=workspace
+      - MAX_AGENT_ITERATIONS=3
+      - LOG_LEVEL=INFO
     volumes:
       - ./output:/app/output
       - ./workspace:/app/workspace
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')",
+        ]
       interval: 30s
       timeout: 5s
       retries: 3
@@ -21,8 +37,17 @@ services:
     command: uv run streamlit run app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true
     ports:
       - "8501:8501"
-    env_file: .env
     environment:
+      - LLM_PROVIDER=openai
+      - OPENAI_API_KEY=<your_api_key>
+      - OPENAI_HEAVY_MODEL=gpt-5.5
+      - ANTHROPIC_API_KEY=
+      - TARGET_LANGUAGE=French
+      - SOLUTION_MODE=VISION
+      - OUTPUT_DIR=output
+      - AGENT_WORKSPACE=workspace
+      - MAX_AGENT_ITERATIONS=3
+      - LOG_LEVEL=INFO
       - BACKEND_URL=http://api:8000
     depends_on:
       api:

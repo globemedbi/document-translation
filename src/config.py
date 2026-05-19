@@ -1,12 +1,10 @@
 from __future__ import annotations
 
 import os
-import sys
 from enum import Enum
 from pathlib import Path
 
 from dotenv import load_dotenv
-from loguru import logger
 
 load_dotenv()
 
@@ -14,18 +12,22 @@ load_dotenv()
 class SolutionMode(str, Enum):
     VISION = "VISION"
     CODING = "CODING"
-    TEXT = "TEXT"    # Direct text-layer replacement for selectable-text PDFs
-    AUTO = "AUTO"    # Auto-detect: TEXT if embedded text found, else VISION
+    TEXT = "TEXT"
+    AUTO = "AUTO"
 
 
 class Settings:
     def __init__(self) -> None:
-        self.anthropic_api_key: str = self._require("ANTHROPIC_API_KEY")
+        self.llm_provider: str = os.getenv("LLM_PROVIDER", "anthropic").lower().strip()
+
+        self.anthropic_api_key: str = os.getenv("ANTHROPIC_API_KEY", "")
         self.anthropic_model: str = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
-        # Heavy model for extraction & coding agent (defaults to Opus for best quality)
-        self.anthropic_heavy_model: str = os.getenv(
-            "ANTHROPIC_HEAVY_MODEL", "claude-opus-4-7"
-        )
+        self.anthropic_heavy_model: str = os.getenv("ANTHROPIC_HEAVY_MODEL", "claude-opus-4-7")
+
+        self.openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
+        self.openai_model: str = os.getenv("OPENAI_MODEL", "gpt-5.5")
+        self.openai_heavy_model: str = os.getenv("OPENAI_HEAVY_MODEL", "o4")
+        self.openai_coding_model: str = os.getenv("OPENAI_CODING_MODEL", "o3")
 
         raw_mode = os.getenv("SOLUTION_MODE", "VISION").upper().strip()
         try:
@@ -41,21 +43,36 @@ class Settings:
         self.agent_workspace: Path = Path(os.getenv("AGENT_WORKSPACE", "workspace"))
         self.log_level: str = os.getenv("LOG_LEVEL", "INFO").upper()
 
-    @staticmethod
-    def _require(key: str) -> str:
-        val = os.getenv(key, "").strip()
-        if not val:
-            raise ValueError(
-                f"Missing required environment variable: {key}\n"
-                f"Copy .env.example to .env and fill in the value."
-            )
-        return val
+    @property
+    def model(self) -> str:
+        return self.openai_model if self.llm_provider == "openai" else self.anthropic_model
+
+    @property
+    def heavy_model(self) -> str:
+        return (
+            self.openai_heavy_model if self.llm_provider == "openai" else self.anthropic_heavy_model
+        )
+
+    @property
+    def coding_model(self) -> str:
+        return self.openai_coding_model if self.llm_provider == "openai" else self.anthropic_model
 
     def __repr__(self) -> str:
         return (
-            f"Settings(mode={self.solution_mode}, lang={self.target_language!r}, "
-            f"model={self.anthropic_model!r}, heavy={self.anthropic_heavy_model!r})"
+            f"Settings(provider={self.llm_provider}, mode={self.solution_mode}, "
+            f"lang={self.target_language!r}, model={self.model!r})"
         )
 
 
 settings = Settings()
+
+
+def get_client():
+    """Return the configured LLM client (Anthropic or OpenAI)."""
+    if settings.llm_provider == "openai":
+        import openai
+
+        return openai.OpenAI(api_key=settings.openai_api_key)
+    import anthropic
+
+    return anthropic.Anthropic(api_key=settings.anthropic_api_key)

@@ -3,15 +3,14 @@ from __future__ import annotations
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-import anthropic
 from loguru import logger
 from PIL import Image
 
-from src.config import settings
+from src.config import get_client, settings
 from src.llm.schema.extraction import BBoxSchema, DocInfoResponse, FormFieldSchema, PageExtractionResponse
-from src.llm.structured import structured_call
+from src.llm.structured import image_block, structured_call
 from src.models import BBox, DocumentExtraction, FormField, PageExtraction
-from src.pdf_utils import image_to_base64, pdf_to_images
+from src.pdf_utils import pdf_to_images
 
 # ── Prompts ───────────────────────────────────────────────────────────────────
 
@@ -73,9 +72,9 @@ def _safe_bbox(raw: BBoxSchema | None) -> BBox | None:
 
 class Extractor:
     def __init__(self) -> None:
-        self.client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
-        self.model = settings.anthropic_model
-        logger.info(f"Extractor initialised (model={self.model})")
+        self.client = get_client()
+        self.model = settings.model
+        logger.info(f"Extractor initialised (provider={settings.llm_provider}, model={self.model})")
 
     # ── Public ────────────────────────────────────────────────────────────────
 
@@ -138,6 +137,7 @@ class Extractor:
                 }],
                 schema=DocInfoResponse,
                 max_tokens=512,
+                reasoning_effort="medium",
             )
         except Exception as exc:
             logger.warning(f"Could not get doc info: {exc}")
@@ -159,6 +159,7 @@ class Extractor:
                     schema=PageExtractionResponse,
                     system=_EXTRACTION_SYSTEM,
                     max_tokens=16000,
+                    reasoning_effort="medium",
                 )
                 logger.debug(f"Page {page_num} attempt {attempt}: {len(result.fields)} fields")
                 fields = self._parse_fields(result.fields, page_num)
@@ -168,9 +169,6 @@ class Extractor:
                     width_px=img.width,
                     height_px=img.height,
                 )
-            except anthropic.APIError as exc:
-                logger.error(f"Anthropic API error on page {page_num} attempt {attempt}: {exc}")
-                raise
             except Exception as exc:
                 logger.warning(
                     f"Page {page_num} attempt {attempt}: structured output error ({exc}). "
@@ -206,13 +204,5 @@ class Extractor:
                 logger.warning(f"Skipping malformed field {i} on page {page_num}: {exc}")
         return fields
 
-    @staticmethod
-    def _image_block(img: Image.Image) -> dict:
-        return {
-            "type": "image",
-            "source": {
-                "type": "base64",
-                "media_type": "image/png",
-                "data": image_to_base64(img),
-            },
-        }
+    def _image_block(self, img: Image.Image) -> dict:
+        return image_block(self.client, img)
