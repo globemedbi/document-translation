@@ -26,7 +26,7 @@ class Settings:
 
         self.openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
         self.openai_model: str = os.getenv("OPENAI_MODEL", "gpt-5.5")
-        self.openai_heavy_model: str = os.getenv("OPENAI_HEAVY_MODEL", "o4")
+        self.openai_heavy_model: str = os.getenv("OPENAI_HEAVY_MODEL", "o4-mini")
         self.openai_coding_model: str = os.getenv("OPENAI_CODING_MODEL", "o3")
 
         raw_mode = os.getenv("SOLUTION_MODE", "VISION").upper().strip()

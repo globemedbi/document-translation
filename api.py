@@ -15,6 +15,7 @@ from __future__ import annotations
 import os
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -99,7 +100,7 @@ async def translate(
 
     result = subprocess.run(
         [
-            "uv", "run", "python", "main.py",
+            sys.executable, "main.py",
             str(pdf_path),
             "--mode", resolved_mode,
             "--language", language,
