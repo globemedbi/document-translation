@@ -15,4 +15,12 @@ docker compose up --build
 | FastAPI backend | http://localhost:8000 |
 | API docs | http://localhost:8000/docs |
 
+## Models used
+
+| Env var | Default | Role |
+|---|---|---|
+| `OPENAI_MODEL` | `gpt-5.5` | Extraction, translation, observer |
+| `OPENAI_HEAVY_MODEL` | `o4-mini` | Layout planner |
+| `OPENAI_CODING_MODEL` | `o3` | Code generation |
+
 For full documentation on modes, architecture, configuration, and API reference, see [info.md](info.md).
